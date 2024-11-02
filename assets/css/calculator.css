@@ -1,0 +1,361 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "League Spartan";
+  background-color: #3A4663;
+}
+
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+.header {
+  max-width: 320px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 32px;
+}
+
+.header h2 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 29.44px;
+  letter-spacing: -0.5333333611488342px;
+  color: #fff;
+}
+
+.themeChange {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  gap: 26px;
+  align-items: center;
+}
+
+.themeChange p {
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 11.04px;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.themeChange button {
+  width: 26px;
+  height: 26px;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.themeChange button:nth-child(2) {
+  background-color: rgba(24, 31, 51, 1);
+  border: none;
+}
+
+.themeChange button:nth-child(3) {
+  background-color: rgba(210, 205, 205, 1);
+  border: none;
+}
+
+.themeChange button:nth-child(4) {
+  background-color: rgba(30, 9, 54, 1);
+  border: none;
+}
+
+.calc {
+  max-width: 327px;
+  margin-inline: auto;
+}
+
+.result-bar {
+  background-color: #181F33;
+  padding: 29px 24px 22px;
+  color: white;
+  text-align: right;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 36.8px;
+  letter-spacing: -0.6666666865348816px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  min-height: 88px;
+}
+
+.calc-btns {
+  background-color: #242D44;
+  padding: 24px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 13px;
+}
+
+.calc-btns button {
+  background-color: #EAE3DC;
+  box-shadow: 0px -4px 0px 0px #B3A497 inset;
+  border-radius: 10px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 29.44px;
+  letter-spacing: -0.5333333611488342px;
+  text-align: center;
+  color: #434A59;
+  padding: 13px 10px 11px;
+  border-style: none;
+  min-height: 64px;
+}
+
+.calc-btns .btn-action {
+  background-color: #647198;
+  box-shadow: 0px -4px 0px 0px #414E73 inset;
+  color: #FFFFFF;
+  padding-block: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 18.4px;
+  letter-spacing: -0.3333333432674408px;
+}
+
+.calc-btns .btn-calc {
+  background-color: #D03F2F;
+  box-shadow: 0px -4px 0px 0px #93261A inset;
+  color: #FFFFFF;
+  padding-block: 12px;
+  grid-column: span 2;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 18.4px;
+  letter-spacing: -0.3333333432674408px;
+}
+
+.calc-btns button:hover {
+  background-color: #FFFFFE;
+  box-shadow: 0px -4px 0px 0px #B3A497 inset;
+}
+
+.calc-btns .btn-action:hover {
+  background-color: #A2B2E1;
+  box-shadow: 0px -4px 0px 0px #414E73 inset;
+}
+
+.calc-btns .btn-calc:hover {
+  background-color: #F96B5B;
+  box-shadow: 0px -4px 0px 0px #93261A inset;
+}
+
+.btn-reset {
+  grid-column: span 2;
+}
+
+/* Light Mode */
+
+.light-mode {
+
+  background-color: rgba(230, 230, 230, 1);
+
+  .header h2 {
+    color: #36362C;
+  }
+
+  .themeChange p {
+    color: rgba(54, 54, 44, 1);
+  }
+
+  .result-bar {
+    background-color: rgba(210, 205, 205, 1);
+    color: rgba(54, 54, 44, 1);
+  }
+
+  .calc-btns {
+    background-color: rgba(210, 205, 205, 1);
+  }
+
+  .calc-btns button {
+    color:rgba(54, 54, 44, 1);
+  }
+
+  .calc-btns .btn-action {
+    background-color: rgba(27, 96, 102, 1);
+    color: white;
+    box-shadow: 0px -4px 0px 0px rgba(27, 96, 102, 1) inset;
+  }
+
+  .calc-btns .btn-calc {
+    background-color: rgba(200, 84, 2, 1);
+    color: white;
+    box-shadow: 0px -4px 0px 0px rgba(135, 57, 1, 1) inset;
+  }
+
+  .calc-btns button:hover {
+    background-color: #FFFFFF;
+    box-shadow: 0px -4px 0px 0px #A79E91 inset;
+  }
+  
+  .calc-btns .btn-action:hover {
+    background-color: #62B5BC;
+    box-shadow: 0px -4px 0px 0px #1B6066 inset;
+  }
+  
+  .calc-btns .btn-calc:hover {
+    background-color: #FF8A38;
+    box-shadow: 0px -4px 0px 0px #873901 inset;
+  }
+  
+}
+
+/* Purple Mode */
+.purple-mode {
+
+  background-color: rgba(23, 6, 42, 1);
+
+  .header h2 {
+    color: #FFE53D;
+  }
+
+  .themeChange p {
+    color: rgba(255, 229, 61, 1);
+
+  }
+
+  .result-bar {
+    background-color: rgba(30, 9, 54, 1);
+    color: rgba(255, 229, 61, 1);
+  }
+
+  .calc-btns {
+    background-color: rgba(30, 9, 54, 1);
+  }
+
+  .calc-btns button {
+    background-color: rgba(51, 28, 77, 1);
+    color: rgba(255, 229, 61, 1);
+    box-shadow: 0px -4px 0px 0px rgba(136, 28, 158, 1) inset;
+  }
+
+  .calc-btns .btn-action {
+    background-color:rgba(86, 7, 124, 1);
+    color: white;
+    box-shadow: 0px -4px 0px 0px rgba(190, 21, 244, 1) inset;
+  }
+
+  .calc-btns .btn-calc {
+    background-color: rgba(0, 222, 208, 1);
+    color: rgba(26, 35, 39, 1);
+    box-shadow: 0px -4px 0px 0px rgba(108, 249, 241, 1) inset;
+  }
+
+  .calc-btns button:hover {
+    background-color: #6C34AC;
+    box-shadow: 0px -4px 0px 0px #881C9E inset;
+
+  }
+  
+  .calc-btns .btn-action:hover {
+    background-color: #8631AF;
+    box-shadow: 0px -4px 0px 0px #BE15F4 inset;
+  }
+  
+  .calc-btns .btn-calc:hover {
+    background-color: #93FFF8;
+    box-shadow: 0px -4px 0px 0px #6CF9F1 inset;
+  }
+}
+
+@media (width >= 768px) {
+  .calc {
+    max-width: 540px;
+  }
+
+  .header {
+    max-width: 533px;
+    margin-top: 98px;
+    margin-bottom: 32px;
+  }
+
+  .result-bar {
+    padding: 40px 32px 36px;
+    font-size: 56px;
+    line-height: 51.52px;
+    min-height: 128px;
+  }
+
+  .calc-btns {
+    padding: 32px;
+    gap: 25px;
+  }
+  
+  .calc-btns button {
+    font-size: 40px;
+    line-height: 36.8px;
+    padding: 13px 13px 11px 14px;
+  }
+
+  .calc-btns .btn-action {
+    font-size: 28px;
+    line-height: 25.76px;
+  }
+
+  .calc-btns .btn-calc {
+    font-size: 28px;
+    line-height: 25.76px;
+  }
+  
+}
